@@ -8,7 +8,7 @@ module.exports = {
         // 'webpack/hot/dev-server',
         // web: 'webpack-dev-server/client?http://localhost:8080',
         path: path.resolve(__dirname, './src/app/index.jsx'),
-//        vendors: ['react']
+        // vendors: ['react']
     },
     output: {
         path: path.join(__dirname, './build'),
@@ -70,6 +70,6 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin("styles.css"),
-//        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+        // new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
     ]
 };
