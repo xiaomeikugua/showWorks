@@ -1,2 +1,2 @@
 1. npm install         ### install dependency library
-2. npm run start       ### use webpack-dev-server
+2. npm start       ### use webpack-dev-server
