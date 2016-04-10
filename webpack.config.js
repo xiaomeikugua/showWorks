@@ -33,6 +33,10 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
+                test: /\.(ttf|eot|svg|woff|woff2|png|gif)(\?\S*)?$/,
+                loader: "file-loader?name=./font/[name]-[hash].[ext]"
+            },
+            {
                test: /\.scss$/,
                loaders: ["style", "css", "sass"],
                // include: /components/,
@@ -42,19 +46,19 @@ module.exports = {
                 loader: 'style!css?modules',
                 // include: [/flexboxgrid/, /src/]
             },
-            // {
-            //     test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,
-            //     loader: 'url-loader?limit=30000&name=./font/[name]-[hash].[ext]',
-            //     include: [/node_modules/, /src/]
-            // },
+            {
+                test: /\.png$/,
+                loader: "url-loader?mimetype=image/png"
+            },
+            {
+                test: /\.(png|gif)$/,
+                loader: 'file-loader?name=images/[name].[ext]',
+                include: [/node_modules/, /src/]
+            },
             {
                 test: /\.less$/,
                 loader: "style!css!less",
                 include: /node_modules/
-            },
-            {
-                test: /\.(ttf|eot|svg|woff|woff2)(\?\S*)?$/,
-                loader: "file-loader?name=./font/[name]-[hash].[ext]"
             }
 
 
