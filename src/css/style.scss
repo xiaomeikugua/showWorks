@@ -7,12 +7,63 @@ body {
   color: gray;
 }
 
+
+
 .navbar-custom-theme {
   background-color: #1d2026;
   border-color: #1d2026;
 }
 
+.big-title {
+  padding-top: 200px;
+  color: white;
+  text-align: center;
+}
+
+.big-title > h1 {
+  font-size: 5vw;
+}
+
+.init-show {
+  background-color: #293d48;
+  height: 600px;
+
+}
+
+@media (max-height: 670px) {
+  .init-show {
+    height: 670px !important;
+  }
+}
+
+@media (max-height: 768px) {
+  .init-show {
+    height: 800px !important;
+  }
+}
+
+@media (max-height: 850px) {
+  .init-show {
+    height: 850px !important;
+  }
+}
+
+@media (max-height: 904px) {
+  .init-show {
+    height: 800px !important;
+  }
+}
+
+
+@media (min-height: 1024px) {
+  .init-show {
+    height: 1024px !important;
+  }
+}
+
+
 .content-info {
+  background-color: rgba(221,221,221, 0.1);
   margin-top: 90px;
 }
 
@@ -75,7 +126,7 @@ body {
 }
 
 .col {
-  margin-top: 2%;
+  margin: 3% 0 3% 0;
 }
 
 .contact {
@@ -106,7 +157,10 @@ body {
 
 .contact-title {
   color: white;
+  display: block;
   text-align: center;
+  font-size: 1.9vw;
+  padding-top: 6%;
 }
 
 .contact-img {
@@ -127,26 +181,36 @@ body {
 }
 
 
+@media screen and (max-width: $screen-sm-min) {
+  .big-title > h1 {
+    font-size: 12vw;
+  }
 
-//@media screen and (max-width: $screen-xs-max) {
-//  .content-info {
-//    margin-top: 9rem;
-//  }
-//}
-//@media screen and (min-width: $screen-sm-min) {
-//  .content-info {
-//    margin-top: 9rem;
-//  }
-//}
-//
-//@media screen and (min-width: $screen-md-min) {
-//  .content-info {
-//    margin-top: 10rem;
-//  }
-//}
-//
-//@media screen and (min-width: $screen-lg-min) {
-//  .content-info {
-//    margin-top: 8rem;
-//  }
-//}
+  .big-title {
+    padding-top: 37vh;
+    color: white;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .big-title > h1 {
+    font-size: 37vh;
+  }
+  .big-title {
+    padding-top: 100px;
+    color: white;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: $screen-lg-min) {
+  .big-title > h1 {
+    font-size: 5vw;
+  }
+  .big-title {
+    padding-top: 37vh;
+    color: white;
+    text-align: center;
+  }
+}

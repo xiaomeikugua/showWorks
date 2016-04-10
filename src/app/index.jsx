@@ -72,17 +72,29 @@ class Content extends React.Component {
   render() {
     let _pWorks = this.props.projectWorks;
     return (
-      <div className="content-info">
-        <div className="container">
-          <div className="row">
-            {
-              _pWorks.map((p) => {
-                return <ContentImgItem projectWorksItem={p}/>
-              })
-            }
-
+      <div>
+        <div className="init-show">
+          <div className="big-title">
+            <h1>Hello World</h1>
           </div>
         </div>
+        <div className="content-info">
+          <div className="container">
+            <div className="row">
+              {
+                _pWorks.map((p) => {
+                  return <ContentImgItem projectWorksItem={p}/>
+                })
+              }
+
+            </div>
+          </div>
+
+        </div>
+        <div className="technology-title">
+          <h3>用到的技术</h3>
+        </div>
+
       </div>
     )
   }
@@ -94,11 +106,11 @@ class Content extends React.Component {
 class ContactItem extends React.Component {
   render() {
     let _contactItem = this.props.contactItem;
+        // <p className="contact-detail">{_contactItem.detail}</p>
     return (
       <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
         <img src={_contactItem.imgUrl} alt="" className="img-circle contact-img"/>
-        <h2 className="contact-title">{_contactItem.contactTitle}</h2>
-        <p className="contact-detail">{_contactItem.detail}</p>
+        <span className="contact-title">{_contactItem.contactTitle}</span>
       </div>
     )
   }
